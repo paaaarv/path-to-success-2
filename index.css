@@ -46,6 +46,7 @@ h3{
     font-size: 1.5em;
     color: #E9BB57;
     margin: 5px; 
+    white-space: nowrap; 
 }
 
 h4 {
@@ -214,6 +215,11 @@ footer p:last-child{
     #choices-container{
         grid-template-columns: repeat(4, 1fr);
     }
+    .choose-choices{
+        width:min-content;
+        display: inline-block;
+        padding: 10px 50px;
+    }
     #all-pricing-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -236,7 +242,65 @@ footer p:last-child{
 }
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 992px){
+nav{
+    width:65%;
+}
+nav h2{
+    display:none;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    padding: 0 5px;
+    margin: 10px auto;
+}
+nav li{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin:auto;
+}
+nav a {
+    text-decoration: none;
+    color: #1E1E1E;
+    font-size: 0.8em;
+}
+#all-services-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#all-services-container h3{
+    text-align: center;
+}
+.service{
+    width: 95%;
+}
+.choose-choices{
+    width: 85%;
+    padding: 10px;
+}
+#all-pricing-container{
+    grid-template-columns:repeat(4,1fr);
+
+}
+#first-step p{
+    text-align:justify;
+}
+button{
+    width:50%;
+}
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width: 1200px){
+    body{
+        max-width: 1100px;
+        margin: auto;
+    }
+    h1{
+        width:90%;
+    }
+    nav{
+        width: 50%;
+    }
 }
