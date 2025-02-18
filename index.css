@@ -51,18 +51,23 @@ h3{
 h4 {
     font-size: 1.15em;
 }
-
-header p{
+#header-summary{
     background-color: #D9526F;
-    padding: 25px 0 10px;
-    margin: 100px auto 0;
+    padding: 10px 0;
+    margin: 100px auto 20px;
     width: 97%;
     border-radius: 0 0 20px 20px;
     color: #ffffff;
     text-align: center;
     font-style: italic;
+    justify-content:baseline;
 }
-header p:last-of-type{
+#header-summary p{
+    display: inline-block;
+    margin-bottom: 0;
+    
+}
+#header-summary p:last-of-type{
     display: none;
 }
 nav {
@@ -160,7 +165,7 @@ table td{
     color: #ffffff;
 }
 button{
-    display: block;
+    display: flex;
     width: 95%;
     background-color: #ffffff;
     color: #1E1E1E;
@@ -168,6 +173,10 @@ button{
     padding: 25px;
     border-radius: 10px;
     box-shadow: 5px 7px 7px #1E1E1E;
+    text-transform: uppercase;
+    font-weight:700;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
@@ -181,13 +190,53 @@ footer{
     font-size: 1em;
     color: #ffffff;
     margin-bottom: 50px;
+    padding: 10px;
+    font-weight:400;
 }
 footer p:last-child{
     text-decoration: underline;
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
-/*nav h2{
-    display: none;
-}*/
+@media screen and (min-width: 768px){
+    #header-summary p:last-of-type{
+        display: inline-block;
+    }
+    .service-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .service{
+        width: 48%;
+    }
+    .service:only-child, .service:last-child:nth-child(odd){
+        width:98%;
+    }
+    #choices-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #all-pricing-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items:start;
+    }
+    .pricing-container{
+        margin: 0 auto 5px;
+    }
+    #first-step{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #first-step p{
+        margin-top: 15px;
+    }
+    #first-step button {
+        height: 45%;
+    }
+ 
+}
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 992px){
+}
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1200px){
+}
